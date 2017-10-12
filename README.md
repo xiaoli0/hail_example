@@ -19,11 +19,12 @@ gsutil -m cp data/* gs://my/bucket/
 ```
 
 2) Change input of `src/hail_example.py`
+
 Update google bucket link of `input`, `output`, `annot` and `qc_results` variable in the `src/hail_example.py` script to enable it to find the right path of files.
 
 3) Spin up a google dataproc cluster
 
-Use this command:
+Use this command. Note that you need to specify your google project ID.
 ```
 gcloud dataproc clusters create <mycluster> \
   --zone us-central1-f \
