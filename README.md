@@ -11,7 +11,8 @@ export PATH=hail_example/src:$PATH
 ```
 
 1) Download example data
-Run `src/get_example_input.py`. This script is from the [hail website](https://hail.is/docs/stable/tutorials/hail-overview.html#Check-for-tutorial-data-or-download-if-necessary). This will download two files `1kg.vds` and `1kg_annotations.txt` to a `data` directory.
+
+Run `get_example_input.py` This will download two files `1kg.vds` and `1kg_annotations.txt` to a `data` directory. (This script is from the [hail website](https://hail.is/docs/stable/tutorials/hail-overview.html#Check-for-tutorial-data-or-download-if-necessary)).
 Upload those files to your google bucket:
 ```
 gsutil -m cp data/* gs://my/bucket/
