@@ -24,7 +24,7 @@ Update google bucket link of `input`, `output`, `annot` and `qc_results` variabl
 
 Use this command:
 ```
-gcloud dataproc clusters create <mycluster> \
+gcloud dataproc clusters create <cluster name> \
   --zone us-central1-f \
   --master-machine-type n1-standard-8 \
   --master-boot-disk-size 100 \
@@ -42,10 +42,9 @@ This command will start up a dataproc cluster with 1 master node and 2 worker no
 
 4) After cluster is up, submit a job via:
 ```
-pyhail-submit <cluster name> src/hail_example.py
+pyhail-submit <cluster name> 'src/hail_example.py -- --inputVds '--inputVds 'gs://my/bucket/data/1kg.vds' --annot 'gs://my/bucket/data/1kg_annotations.txt' --outputVds 'gs://my/bucket/data/1kg_out.vds' --qcResults 'gs://my/bucket/data/1kg_sampleqc.txt'
 ```
-This script is from the hail team. It's a wrapper over gcloud command to submit jobs to a dataproc cluster. 
-There will be screen prompts indicating progress of the analysis.
+This script is from the hail team. It's a wrapper over gcloud command to submit jobs to a dataproc cluster. There will be screen prompts indicating progress of the analysis.
 
 5) Once the compute is done, kill the cluster in the google cloud console.
 
