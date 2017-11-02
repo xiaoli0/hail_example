@@ -34,7 +34,7 @@ gcloud dataproc clusters create <cluster name> \
   --worker-machine-type n1-standard-8 \
   --worker-boot-disk-size 75 \
   --num-worker-local-ssds 0 \
-  --num-preemptible-workers 2 \
+  --num-preemptible-workers 0 \
   --image-version 1.1 \
   --project <your google project ID> \
   --properties "spark:spark.driver.extraJavaOptions=-Xss4M,spark:spark.executor.extraJavaOptions=-Xss4M,spark:spark.driver.memory=45g,spark:spark.driver.maxResultSize=30g,spark:spark.task.maxFailures=20,spark:spark.kryoserializer.buffer.max=1g,hdfs:dfs.replication=1" \
